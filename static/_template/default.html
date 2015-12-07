@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <title><%- config.title %></title>
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="/static/github.css">
     <style>
@@ -13,8 +13,8 @@
     </style>
 </head>
 <body>
-    {{include "/nav.md"}}
+    <%- include("/nav.md"); %>
     <hr>
-    {{{content}}}
+    <%- content %>
 </body>
 </html>

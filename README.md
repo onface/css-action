@@ -13,6 +13,7 @@
 你可以 [提交技巧](https://github.com/nimojs/css-tips/issues/new) 或者 Fork 本项目后 以 Pull Requests 的方式提交
 
 ## 构建
+基于 FIS3 构建，请先确保你了解和安装了 [FIS3](http://fis.baidu.com/fis3/docs/beginning/intro.html)
 ```shell
 npm install
 npm run m
