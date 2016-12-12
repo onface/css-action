@@ -1,7 +1,9 @@
 fis.hook('relative');
-
+var markrun = require('markrun')
 fis.match('**.md', {
-    parser: fis.plugin('marked-template'),
+    parser: function (content) {
+        return markrun(content)
+    },
     useCache: false,
     relative: true,
     rExt: '.html'

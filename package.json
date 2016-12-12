@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "m": "fis3 release -wL -d ./output"
+    "dev": "fis3 release -w -d ./output"
   },
   "dependencies": {
-    "fis-parser-marked-template": "^0.0.1"
+    "fis3-hook-relative": "^1.0.9",
+    "markrun": "^0.6.0"
   }
 }
