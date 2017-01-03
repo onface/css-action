@@ -1,10 +1,16 @@
 ## 带 margin 的列表
 
-### 多层 div overflow 
+### 多层 div overflow
 ````html
 <div class="box">
     <div class="inner b-clear">
-        <div class="item"> 1 </div> <div class="item"> 2 </div> <div class="item"> 3 </div> <div class="item"> 4 </div> <div class="item"> 5 </div> <div class="item"> 6 </div> </div>
+        <div class="item"> 1 </div>
+        <div class="item"> 2 </div>
+        <div class="item"> 3 </div>
+        <div class="item"> 4 </div>
+        <div class="item"> 5 </div>
+        <div class="item"> 6 </div>
+    </div>
 </div>
 ````
 ````css
@@ -22,7 +28,7 @@ body {
 ````
 
 ````css
-.box { 
+.box {
     width:320px;
     /*overflow:hidden;*/
 }
@@ -43,9 +49,11 @@ body {
 
 ### css3 nth-child
 
+> IE8不支持 `nth-child`
+
 ````html
 <div class="box2 b-clear">
-    <div class="item"> 1 </div> <div class="item"> 2 </div> <div class="item"> 3 </div> <div class="item"> 4 </div> <div class="item"> 5 </div> <div class="item"> 6 </div> 
+    <div class="item"> 1 </div> <div class="item"> 2 </div> <div class="item"> 3 </div> <div class="item"> 4 </div> <div class="item"> 5 </div> <div class="item"> 6 </div>
 </div>
 ````
 
@@ -67,5 +75,26 @@ body {
     .box2 .item:nth-child(2n+0) {
         margin-right:0px;
     }
+}
+````
+
+### IE8 模拟 nth-child
+
+> 使用 `.item:first-child+.item` 模拟，但只适用于内容较少的页面。
+
+````html
+<div class="box3 b-clear">
+    <div class="item"> 1 </div> <div class="item"> 2 </div> <div class="item"> 3 </div> <div class="item"> 4 </div> <div class="item"> 5 </div> <div class="item"> 6 </div>
+</div>
+````
+
+
+````css
+.box3 {
+    width:320px;
+}
+.box3 .item:first-child+.item+.item,
+.box3 .item:first-child+.item+.item+.item+.item+.item {
+    margin-right:0;
 }
 ````
