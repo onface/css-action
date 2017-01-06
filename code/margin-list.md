@@ -82,9 +82,12 @@ body {
 
 > 使用 `.item:first-child+.item` 模拟，但只适用于内容较少的页面。
 
+> 因为只使用 `.box3 .item:first-child+.item+.item+.item+.item+.item` 模拟到“2行”，所以 "9" 会在 “7” 的下方，而不是 “8” 的右边。
+
 ````html
 <div class="box3 b-clear">
     <div class="item"> 1 </div> <div class="item"> 2 </div> <div class="item"> 3 </div> <div class="item"> 4 </div> <div class="item"> 5 </div> <div class="item"> 6 </div>
+    <div class="item"> 7 </div> <div class="item"> 8 </div> <div class="item"> 9 </div>
 </div>
 ````
 
