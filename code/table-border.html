@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" rel="stylesheet">
+		td {
+			border-style: dashed;
+		}
+		th , td {
+			width: 200px;
+			border-width: 10px;
+			border-color: green;
+		}
+		table {
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+<h4>优先级 : </h4>
+<h4>hidden > double > solid > dashed > dotted > ridge > outset > groove > inset > none </h4>
+<hr/>
+选择border-style : 
+<select id="border">
+	<option value="dashed">dashed</option>
+	<option value="dotted">dotted</option>
+	<option value="double">double</option>
+	<option value="groove">groove</option>
+	<option value="inset">inset</option>
+	<option value="outset">outset</option>
+	<option value="ridge">ridge</option>
+	<option value="solid">solid</option>
+	<option value="hidden">hidden</option>
+	<option value="none">none</option>
+</select>
+	查看效果
+<hr/>
+<table>
+		<caption>table中border-style优先级</caption>
+		<colgroup>
+		    <col style="background-color:white">
+		    <col span="10" style="background-color:red">
+		    <col style="background-color:yellow">
+		</colgroup>
+		<tbody>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td style="
+				    border-style: dashed;
+				    border-color: lightsalmon;
+				    color:white;
+				">dashed</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td style="
+				    border-style: dotted;
+				    border-color: aqua;
+				    color:white;
+				">dotted</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td style="
+				    border-style: double;
+				    border-color: blanchedalmond;
+				    color:white;
+				">double</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td style="
+				    border-style: groove;
+				    color:white;
+				    border-color: springgreen;
+				">groove</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td style="
+				    border-style: inset;
+				    border-color: blueviolet;
+				    color:white;
+				">inset</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td style="
+				    border-style: outset;
+				    border-color: aquamarine;
+				    color:white;
+				">outset</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td style="
+				    border-style: ridge;
+				    border-color: blue;
+				    color:white;
+				">ridge</td>
+				<td>body8</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td style="
+				    border-style: solid;
+				    border-color: azure;
+				    color:white;
+				">solid</td>
+				<td>body9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td style="
+				    border-style: hidden;
+				    color:white;
+				">hidden</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+			<tr>
+				<td>body0</td>
+				<td>body1</td>
+				<td>body2</td>
+				<td>body3</td>
+				<td>body4</td>
+				<td>body5</td>
+				<td>body6</td>
+				<td>body7</td>
+				<td>body8</td>
+				<td>foot9</td>
+				<td style="
+				    border-style: none;
+				    color:white;
+				">none</td>
+				<td>body11</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>foot0</td>
+				<td>foot1</td>
+				<td>foot2</td>
+				<td>foot3</td>
+				<td>foot4</td>
+				<td>foot5</td>
+				<td>foot6</td>
+				<td>foot7</td>
+				<td>foot8</td>
+				<td>foot9</td>
+				<td>body10</td>
+				<td>body11</td>
+			</tr>
+		</tfoot>
+</table>
+
+<script>
+	document.getElementById('border').onchange = function(e){
+		var style1 = document.styleSheets[0].rules[0]
+		style1.style.borderStyle = e.target.value
+	}
+</script>
+
+</body>
+</html>
