@@ -1,5 +1,5 @@
 - **[Home](./README.md)**
-- [规范和最佳实践](./code/alice-rule.md)
+- [规范和最佳实践](./code/rule.md)
 - [带外边距列表](./code/margin-list.md)
 - [纯CSS箭头](./code/arrows.md)
 - [不固定宽高元素水平垂直居中](./code/level-vertical-middle.md)
