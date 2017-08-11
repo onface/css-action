@@ -1,6 +1,81 @@
 ## 列表
 
+### 固定间距
+
+> IE8不支持 `nth-child`
+
+- 外层可不定宽
+
+
+````html
+<div class="space">
+    <div class="space-item">
+        <div class="space-item-cnt">A</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">B</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">C</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">A</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">B</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">C</div>
+    </div>
+</div>
+<div class="space">
+    <div class="space-item">
+        <div class="space-item-cnt">A</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">B</div>
+    </div>
+    <div class="space-item">
+        <div class="space-item-cnt">C</div>
+    </div>
+</div>
+````
+
+````css
+.space {
+    background-color: #bfffc2;
+    margin-bottom: 10px;
+}
+.space:after {
+    content: ' ';
+    display:block;
+    clear:both;
+}
+.space-item:nth-child(1n+0) {
+    padding-left: 0;
+}
+.space-item:nth-child(3n+0) {
+    padding-right: 0;
+}
+.space-item {
+    width: 33.3333333%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    float: left;
+}
+.space-item-cnt {
+    background-color:skyblue;
+    font-size:30px;
+    min-height: 40px;
+}
+````
+
 ### 多层 div overflow
+
+兼容性好
+
 ````html
 <div class="box">
     <div class="inner b-clear">
